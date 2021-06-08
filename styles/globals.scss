@@ -1,0 +1,151 @@
+@import './abstracts';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $fonts;
+  background-color: $background_color;
+  color: $text;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &.link{
+    color: $text_secondary;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+input{
+  height: 40px;
+  padding: 0 15px;
+}
+textarea{
+  height: 80px;
+  padding: 12px 15px;
+  resize: vertical;
+}
+
+input, textarea  {
+  outline: none;
+  background: none;
+  border: 1px solid $text;
+  border-radius: 20px;
+  color: $text;
+
+  &::placeholder {
+    color: $text_transp;
+  }
+
+  &.secondary{
+    background-color: $background_color_secondary;
+    border: none;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px $background_color_secondary inset !important;
+  -webkit-text-fill-color: $text;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+
+
+button {
+  min-width: 150px;
+  height: 36px;
+  border-radius: 18px;
+  padding: 5px 24px;
+  background: none;
+  border: 1px solid $button_border;
+  color: inherit;
+  white-space: nowrap;
+  transition: $transition_links;
+
+  &:hover{
+    cursor: pointer;
+    border: 1px solid $button_border_hover;
+    background: $button_background_hover;
+    color: $text_secondary;
+  }
+
+
+  &.secondary{
+    background: $button_background_secondary;
+    border: none;
+    color: $text_secondary;
+
+    &:hover {
+      background: $button_background_secondary_hover;
+    }
+  }
+
+  &:focus{
+    outline: none;
+  }
+}
+
+h1{
+  font-size: 32px;
+  font-weight: 500;
+  margin: 40px 0;
+
+  @include media-query($medium-up){
+    font-size: 40px;
+  };
+}
+h2{
+  font-size: 22px;
+  font-weight: 500;
+  margin: 30px 0;
+
+  @include media-query($medium-up){
+    font-size: 32px;
+  };
+}
+h3{
+  font-size: 18px;
+  font-weight: 400;
+
+  @include media-query($medium-up){
+    font-size: 22px;
+  };
+}
+h4{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4em;
+
+  @include media-query($medium-up){
+    font-size: 18px;
+  };
+}
+
+
+b{
+  font-weight: 600;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  list-style-type: none;
+}

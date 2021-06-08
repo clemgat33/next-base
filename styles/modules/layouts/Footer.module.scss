@@ -1,0 +1,53 @@
+@import 'styles/abstracts';
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 20px;
+  height: $footer_size;
+  border-top: 1px solid $background_color_secondary;
+  display: flex;
+  align-items: center;
+
+  @include media-query($medium-up){
+    padding: 0 32px;
+  };
+}
+
+.menu_list{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  @include media-query($medium-up){
+    flex-direction: row;
+    align-items: center;
+  };
+
+  li{
+    margin: 0 10px;
+    font-size: 14px;
+  }
+}
+
+.copyright{
+opacity: 0.5;
+}
+
+.link{
+  display: none;
+  opacity: 0.5;
+  transition: 0.4s ease-out;
+
+  &:hover, &:active{
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  @include media-query($medium-up){
+    display: block;
+  };
+}

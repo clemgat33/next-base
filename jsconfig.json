@@ -1,0 +1,14 @@
+{
+  "_comment": "compilerOptions: https://nextjs.org/docs/advanced-features/module-path-aliases",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/elements/*": ["components/elements/*"],
+      "@/Layout": ["components/layouts/Layout"],
+      "@/styles/*": ["styles/*"],
+      "@/utils/*": ["utils/*"],
+      "@/hooks/*": ["hooks/*"]
+    }
+  }
+}
